@@ -1,3 +1,4 @@
+#R İSTATİSTİK HAKKINDA GENEL BİLGİLER 
 R, istatistiksel hesaplama, veri analizi ve grafiksel gösterimler için veri bilimcileri ve istatistikçiler tarafından dünya çapında yaygın olarak kullanılan güçlü ve açık kaynaklı bir programlama dilidir.
 R programlama dilinin şüphesiz en önemli özelliği açık kaynak kodlu ve ücretsiz olmasıdır. Diğer özellikleri ise şu şekildedir;
 Diğer programlar ile kıyaslandığında (SPSS, WEKA vb.) en kapsamlı istatistiksel analiz paketidir. R standart istatistiksel testler, doğrusal ve doğrusal olmayan modelleme, klasik istatistik testleri, zaman serileri analizi, sınıflandırma, kümeleme gibi istatistiksel ve gelişmiş grafiksel çizim teknikleri sunmaktadır.
