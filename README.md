@@ -23,4 +23,39 @@ https://cran.r-project.org/bin/linux/ubuntu/fullREADME.html
 R nin arayüzü kullanıma çok uygun olduğunu düşünmediğimden RStudio'nun arayüzünü kullanıcam onun içinde
 https://posit.co/products/open-source/rstudio buradan inidrme yapabilirsiniz.
 Kurulumları gerçekleştirdikten sonra YouTube üzerinden R ın ilk kullanımı ile ilgili bilgilere ulaşabilirsiniz.
+# Regresyon Nedir? Regresyon Çeşitleri Nelerdir?
+Regresyon analizi, veri bilimi ve istatistiğin temel taşlarından biridir.
+En basit tabiriyle; bir bağımlı değişken ile bir veya daha fazla bağımsız değişken arasındaki 
+ilişkiyi anlamak ve geleceğe dair tahminlerde bulunmak için kullanılan matematiksel bir yöntemdir.
 
+Hayatta her şey birbiriyle bağlantılıdır. "Hava sıcaklığı artarsa dondurma satışları ne kadar artar?" veya
+"Eğitim yılı arttıkça gelir ne kadar yükselir?" gibi soruların cevabını net bir matematiksel modelle vermek istersiniz.
+Peki neden kullanılır?
+Tahminleme (Prediction): Elimizdeki verileri kullanarak gelecekte ne olacağını kestirmek.
+İlişki Analizi: Değişkenler arasındaki ilişkinin ne kadar güçlü olduğunu anlamak.
+Karar Destek: İş dünyasında riskleri azaltmak ve verilere dayalı stratejiler geliştirmek.
+Regresyoun tarihçesine bakacak olursak regresyonun kökeni 19. yüzyılın başlarına kadar uzanır.
+Fransız matematikçi Adrien-Marie Legendre 1805 yılında, "En Küçük Kareler Yöntemi"ni (Least Squares) yayınladı. 
+Bu, regresyonun hesaplanma şeklinin temelidir. Regresyon en önemli isimlerinden biri hatta isim babası olan kişi de 
+İngiliz bilim insanıFrancis Galton, "Regresyon" terimini 1880'lerde ilk kullanan kişidir. Galton, uzun boylu
+babaların çocuklarınınboyunun ortalamaya doğru "gerilediğini" (regression to the mean) fark etmiş ve 
+bu fenomene bu ismi vermiştir.
+
+İstatistik dünyasında çok sayıda regresyon türü olsa da, en çok kullanılan çeşitleri;
+
+A. Basit Doğrusal Regresyon (Simple Linear Regression) :Tek bir bağımsız değişken ile
+bağımlı değişken arasındaki ilişkiyi düz bir çizgi üzerinde inceler. Formülü şu şekildedir:
+$$Y = \beta_0 + \beta_1 X + \epsilon$$
+
+
+B. Çoklu Doğrusal Regresyon (Multiple Linear Regression)Bağımlı değişkeni etkileyen birden
+fazla bağımsız değişken olduğunda kullanılır. Örneğin; bir evin fiyatını (y) tahmin ederken sadece
+metrekaresine ($x_{1}$) değil, oda sayısına ($x_{2}$) ve konumuna ($x_{3}$) da bakılması durumudur.
+
+C. Lojistik Regresyon (Logistic Regression)Sonucun sayısal değil, kategorik (Evet/Hayır, Geçti/Kaldı, 0/1) 
+olduğu durumlarda kullanılır. Örneğin, bir e-postanın spam olup olmadığını tahmin etmek için kullanılır.
+
+D. Polinom Regresyon (Polynomial Regression)Değişkenler arasındaki ilişki düz bir çizgi değil 
+de bir eğri ise tercih edilir.E. Ridge ve Lasso RegresyonVeri setinde çok fazla değişken olduğunda ve bu 
+değişkenler arasında yüksek korelasyon bulunduğunda, modelin aşırı öğrenmesini (overfitting) engellemek için 
+kullanılan düzenleme (regularization) teknikleridir.
