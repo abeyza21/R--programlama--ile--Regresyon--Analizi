@@ -58,3 +58,35 @@ D. Polinom Regresyon (Polynomial Regression) :Değişkenler arasındaki ilişki 
 de bir eğri ise tercih edilir.E. Ridge ve Lasso RegresyonVeri setinde çok fazla değişken olduğunda ve bu 
 değişkenler arasında yüksek korelasyon bulunduğunda, modelin aşırı öğrenmesini (overfitting) engellemek için 
 kullanılan düzenleme (regularization) teknikleridir.
+# Basit Doğrusal Regresyon 
+Basit doğrusal regresyon; bağımsız değişken (X)ile bağımlı değişken (Y)deki değişimi açıklamayı, bağımsız değişkendeki bir birimlik değişimin bağımlı değişken üzerindeki etkisini ölçmeyi amaçlar.
+Temel amaç, bağımlı ve bağımsız değişken arasındaki ilişkiyi ifade eden doğrusal fonksiyonu bulmaktır.
+Stokastik (Olasılıklı) bir model olan ve ana kütledeki ilişkiyi gösteren basit doğrusal regresyon denklemi aşağıdaki gibi ifade edilir.<br>
+y=β0+β1X+ϵ
+Burada;<br>
+β0:Doğrunun y-eksenini kestiği yer ve regresyon sabitidir.<br>
+β1:Doğrunun eğimi veya regresyon katsayısıdır.<br>
+ϵ: Rastgele(Tesadüfi-Şans) hata değeridir.<br>
+Biz kurduğumuz regresyonun doğruluğunu ve güvenilirliğini anlamak için  bazı tesler yapıyoruz bu testler  varyasyonların homojenliği testi,otokolerasyon testi, normallik testi 
+
+
+# R2: Regresyon Modelinin Performansı
+Bağımsız değişken x’in, regresyon modeli ile bağımlı değişken y’i ne kadar açıkladığı yüzdesinin ölçütü olan belirtme katsayısı bir diğer adıyla determinasyon katsayısıdır ve R2 ile gösterilir. Belirtme katsayısı, bağımlı değişkendeki değişimin yüzde kaçının bağımsız değişkenler tarafından açıklanabildiğini gösterir.
+R2, “0” ile “1” arasında değerler alır(0<R2<1). Değişkenler arasında doğrusal bir ilişki olduğunda, R2 değerinin 1’e yaklaşması; bağımlı değişkendeki değişimin büyük bir kısmının bağımsız değişkenler tarafından açıklandığını gösterir. Bağımlı ve bağımsız değişken arasındaki ilişkinin derecesi ve yönünü gösteren korelasyon katsayısının(r) karesi belirtme katsayısına (R2) eşittir. Belirtme katsayısı:
+R2=Açıklanabilen Değişim/Toplam Değişim=RKT/YOAKT eşitliğiyle hesaplanır.
+Eşitlikte verilen RKT; regresyon kareler toplamı ve YOAKT; Y ortalama ayrılış kareler toplamıdır.
+
+Kurulan regresyon modelinin performansı, R2 ile ölçülür. R2, 1’e ne kadar yakınsa, regresyon o kadar anlamlıdır ve belirleyicidir. Bu konuda bilimsel bir karar verebilmek için hipotez testi yapılır.
+
+# Düzeltilmiş R Kare
+R-kare, lineer regresyon modeli için bağımsız değişkenlerimiz (X) tarafından açıklanan bağımlı değişkenimizdeki (Y) varyasyon oranını ölçer. Düzeltilmiş R-kare sadece gerçekte bağımlı değişkeni etkileyen bağımsız değişkenler tarafından açıklanan varyasyon oranını ölçer.
+
+Düzeltilmiş R kare= $$ 1-(1 – R2 )*n-1/n-p-1$$ <br>
+n: Örneklemdeki veri sayısı<br>
+p: bağımsız değişken sayısı<br>
+
+# Korelasyon Katsayısı(r)
+
+
+
+
