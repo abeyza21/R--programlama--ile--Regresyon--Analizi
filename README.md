@@ -67,6 +67,7 @@ Burada;<br>
 * β0:Doğrunun y-eksenini kestiği yer ve regresyon sabitidir.<br>
 * β1:Doğrunun eğimi veya regresyon katsayısıdır.<br>
 * ϵ: Rastgele(Tesadüfi-Şans) hata değeridir.<br>
+
 Biz kurduğumuz regresyonun doğruluğunu ve güvenilirliğini anlamak için  bazı tesler yapıyoruz bu testler  varyasyonların homojenliği testi, otokolerasyon testi, normallik testi, T-testi, Ki-Kare testi, F-testi, $$R^2$$ testi bunlar sadece teslerin birkaçı. Regresyona uygulanabilecek daha pek çok test var. 
 # Regresyondaki Testerin Kullanımları ve Özellikleri 
 ## 1) T-Testi 
