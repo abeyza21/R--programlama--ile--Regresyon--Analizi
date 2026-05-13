@@ -126,8 +126,32 @@ Burada:<br>
 * $s_{\text{fark}}$ = Eşleştirilmiş veri değerlerinin farklarının standart sapması
 * $N$ = Örneklem boyutu (eşleştirilmiş farkların sayısı)
 * $N-1$ = Serbestlik dereceleri
-* anlamına gelmektedir. 
+anlamına gelmektedir.
+#### 2)Eşit Varyans veya Birleştirilmiş T-Testi Formülü
 
+$$
+\text{T değeri} = \frac{\text{ortalama}_1 - \text{ortalama}_2}{\sqrt{\frac{(n_1 - 1) \times \text{var}_1^2 + (n_2 - 1) \times \text{var}_2^2}{n_1 + n_2 - 2} \times \left( \frac{1}{n_1} + \frac{1}{n_2} \right)}}
+$$
+Burada:<br>
+* $\text{ortalama}_1, \text{ortalama}_2$ = Örneklem kümelerinin her birinin ortalama değerleri
+* $\text{var}_1, \text{var}_2$ = Örneklem kümelerinin her birinin varyansı
+* $n_1, n_2$ = Her örnek kümesindeki kayıt sayısı (örneklem boyutu)
+anlamına gelmektedir.
+#### 4) Eşit Olmayan Varyans T-Testi Formülü
+
+$$
+\text{T değeri} = \frac{\text{ortalama}_1 - \text{ortalama}_2}{\sqrt{\left( \frac{\text{var}_1}{n_1} + \frac{\text{var}_2}{n_2} \right)}}
+$$
+
+Burada:<br>
+* $\text{ortalama}_1 \text{ ve } \text{ortalama}_2$ = Örneklem kümelerinin her birinin ortalama değerleri
+* $\text{var}_1 \text{ ve } \text{var}_2$ = Örneklem kümelerinin her birinin varyansı
+* $n_1 \text{ ve } n_2$ = Her örnek kümesindeki kayıt sayısı (örneklem boyutu)
+anlamına gelmektedir.
+#### Özelte T testi:
+T-testi, iki popülasyon örneğinin ortalamaları arasında istatistiksel olarak anlamlı bir fark olup olmadığını belirlemek için kullanılır. İstatistikte hipotez testinde kullanılır ve iki popülasyon arasındaki farklılıkların anlamlı mı yoksa rastgele mi olduğunu gösterebilir.<br>
+T-testi hesaplaması üç veri kullanır: her veri kümesindeki ortalama değerler arasındaki fark, her grubun standart sapması ve veri değerlerinin sayısı.<br>
+T-test formülünün farklı varyasyonları vardır. Hangisinin kullanılacağı farklı faktörlere bağlıdır. Ancak her varyasyon aynı istatistiksel soruyu incelemek için kullanılır.<br>
 
 
 
