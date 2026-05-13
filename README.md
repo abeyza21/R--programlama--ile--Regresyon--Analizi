@@ -67,7 +67,42 @@ Burada;<br>
 β0:Doğrunun y-eksenini kestiği yer ve regresyon sabitidir.<br>
 β1:Doğrunun eğimi veya regresyon katsayısıdır.<br>
 ϵ: Rastgele(Tesadüfi-Şans) hata değeridir.<br>
-Biz kurduğumuz regresyonun doğruluğunu ve güvenilirliğini anlamak için  bazı tesler yapıyoruz bu testler  varyasyonların homojenliği testi,otokolerasyon testi, normallik testi 
+Biz kurduğumuz regresyonun doğruluğunu ve güvenilirliğini anlamak için  bazı tesler yapıyoruz bu testler  varyasyonların homojenliği testi, otokolerasyon testi, normallik testi, T-testi, Ki-Kare testi, F-testi, $$R^2$$ testi bunlar sadece teslerin birkaçı. Regresyona uygulanabilecek daha pek çok test var. 
+# Regresyondaki Testerin Kullanımları ve Özellikleri 
+## ->T-Testi 
+
+T-testi, iki farklı grubun ortalama değerleri arasında istatistiksel olarak anlamlı bir fark olup olmadığını belirlemek için kullanılan temel bir çıkarımsal istatistik yöntemidir.<br>
+Gerçek dünyadaki veriler nadiren birbirinin aynısıdır. T-testi, gözlemlenen farkın sadece **şans eseri mi** oluştuğunu yoksa **belirgin bir nedene mi** dayandığını anlamamızı sağlar.
+* **Eğitim:** Bir fizik dersindeki öğrencilerin notları ile bir yazı dersindeki farklı bir öğrenci grubunun notlarının karşılaştırılması.
+* **Tıp:** Bir ilaç testinde, plasebo verilen (kontrol grubu) ile ilaç verilen (deney grubu) hastaların iyileşme oranlarının analizi.
+
+## T-Testi Varsayımları
+Sağlıklı bir t-testi sonucu alabilmek için verilerin şu dört ana varsayımı karşılaması gerekir:
+
+1.  **Ölçek Türü:** Toplanan veriler sürekli (continuous) veya sıralı (ordinal) bir ölçeğe uygun olmalıdır (Örn: IQ skorları, sınav notları).
+2.  **Rastgele Örneklem:** Veriler, toplam nüfusun rastgele seçilmiş bir bölümünden toplanmalıdır.
+3.  **Normal Dağılım:** Veriler grafik üzerine döküldüğünde çan eğrisi şeklinde bir normal dağılım sergilemelidir.
+4.  **Varyans Homojenliği:** Grupların standart sapmalarının eşit veya birbirine çok yakın (homojen) olması gerekir.
+
+##  T- Testinde hipotezlerin kullanılması 
+ * **$H_0$ (Sıfır Hipotezi / Yokluk Hipotezi)**: İncelenen durumlar arasında bir fark veya ilişki olmadığını savunan, "statüko"yu temsil eden hipotezdir.<br>
+* **$H_1$ (Alternatif Hipotez)**: Araştırmacının asıl ispatlamaya çalıştığı, değişkenler arasında anlamlı bir fark veya ilişki olduğunu öne süren hipotezdir.
+T-testi, her iki veri kümesinden birer örneklem alır ve süreci **Sıfır Hipotezi ($H_0$)** üzerine kurar.
+
+**Sıfır Hipotezi ($H_0$):** İki ortalamanın birbirine eşit olduğunu varsayar (Fark yoktur).
+Formüller kullanılarak hesaplanan değerler, standart tablo değerleri ile karşılaştırılır. Bu karşılaştırma, farkın "şans aralığının" dışında olup olmadığını belirler.
+**
+
+## Sonuçların Yorumlanması
+
+T-testi, gruplar arasında gerçek bir fark olup olmadığını sorgular. Analiz sonucunda p-değeri ve t-skoru baz alınarak şu kararlara varılır:
+
+| Karar | Anlamı |
+| :--- | :--- |
+| **Sıfır Hipotezi Reddedildi** | Farklılıklar istatistiksel olarak **anlamlıdır**. Veriler güçlüdür ve fark muhtemelen şans eseri değildir. |
+| **Sıfır Hipotezi Kabul Edildi** | Farklılıklar istatistiksel olarak **anlamlı değildir**. Gruplar arasındaki fark rastlantısal olabilir. |
+
+---
 
 T-Testini Kullanmak
 T-testi hesaplamak için üç temel veri değerine ihtiyaç vardır:
