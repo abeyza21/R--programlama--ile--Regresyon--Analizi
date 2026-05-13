@@ -189,5 +189,9 @@ r ≈ 0 olduğunda ise değişkenler arasında zayıf veya anlamlı bir doğrusa
 
 Korelasyon katsayısının mutlak değeri 1’e yaklaştıkça ilişkinin gücü artar. Örneğin, r = 1 tam pozitif ilişkiyi, r = -1 ise tam negatif ilişkiyi ifade eder. Bu yöntem veri analizi, makine öğrenmesi ve istatistiksel modelleme çalışmalarında değişkenler arasındaki ilişkiyi incelemek için yaygın olarak kullanılmaktadır.
 
+#### Korelasyon Katsayısı ve R² Farkı
 
+Korelasyon katsayısı, iki değişken arasındaki doğrusal ilişkinin yönünü ve gücünü gösterir. Regresyon katsayısı ise bağımsız değişkendeki değişimin bağımlı değişken üzerindeki etkisini ifade eder.
+Regresyon modelinin anlamlı olması için eğim katsayısı olan β₁’in sıfırdan farklı olması gerekir. β₁ ≠ 0 ise değişkenler arasında anlamlı bir ilişki vardır.
+R² (R Kare) değeri, regresyon modelinin veriyi açıklama oranını gösterir. R² değeri 1’e yaklaştıkça modelin başarısı artar.
 
