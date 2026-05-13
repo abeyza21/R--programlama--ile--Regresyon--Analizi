@@ -162,9 +162,9 @@ $$R^2$$ =Açıklanabilen Değişim/Toplam Değişim=RKT/YOAKT<br>
 eşitliğiyle hesaplanır.<Br>
 Eşitlikte verilen RKT; regresyon kareler toplamı ve YOAKT; Y ortalama ayrılış kareler toplamıdır.
 
-Kurulan regresyon modelinin performansı, R2 ile ölçülür. R2, 1’e ne kadar yakınsa, regresyon o kadar anlamlıdır ve belirleyicidir. Bu konuda bilimsel bir karar verebilmek için hipotez testi yapılır.
+Kurulan regresyon modelinin performansı, $$R^2$$ ile ölçülür. $$R2^$$, 1’e ne kadar yakınsa, regresyon o kadar anlamlıdır ve belirleyicidir. Bu konuda bilimsel bir karar verebilmek için hipotez testi yapılır.
 
-# Düzeltilmiş R Kare
+#### Düzeltilmiş R Kare
 R-kare, lineer regresyon modeli için bağımsız değişkenlerimiz (X) tarafından açıklanan bağımlı değişkenimizdeki (Y) varyasyon oranını ölçer. Düzeltilmiş R-kare sadece gerçekte bağımlı değişkeni etkileyen bağımsız değişkenler tarafından açıklanan varyasyon oranını ölçer.
 
 
@@ -173,11 +173,11 @@ R-kare, lineer regresyon modeli için bağımsız değişkenlerimiz (X) tarafın
 $$
 \text{Düzeltilmiş R-kare} = 1 - \left( \frac{(1 - R^2) \times (n - 1)}{n - p - 1} \right)
 $$
-
-**Burada:**
+Burada:<br>
 * **$n$:** Örneklemdeki veri sayısı
 * **$p$:** Bağımsız değişken sayısı
 * **$R^2$:** Belirleyicilik katsayısı (R-kare)
+anlmaına gelmekteder. 
 
 # Korelasyon Katsayısı(r)
 
