@@ -30,9 +30,9 @@ ilişkiyi anlamak ve geleceğe dair tahminlerde bulunmak için kullanılan matem
 Hayatta her şey birbiriyle bağlantılıdır. "Hava sıcaklığı artarsa dondurma satışları ne kadar artar?" veya
 "Eğitim yılı arttıkça gelir ne kadar yükselir?" gibi soruların cevabını net bir matematiksel modelle vermek istersiniz.
 Peki neden kullanılır?<br>
-Tahminleme (Prediction): Elimizdeki verileri kullanarak gelecekte ne olacağını kestirmek.<br>
-İlişki Analizi: Değişkenler arasındaki ilişkinin ne kadar güçlü olduğunu anlamak.<br>
-Karar Destek: İş dünyasında riskleri azaltmak ve verilere dayalı stratejiler geliştirmek.<br>
+* Tahminleme (Prediction): Elimizdeki verileri kullanarak gelecekte ne olacağını kestirmek.<br>
+* İlişki Analizi: Değişkenler arasındaki ilişkinin ne kadar güçlü olduğunu anlamak.<br>
+* Karar Destek: İş dünyasında riskleri azaltmak ve verilere dayalı stratejiler geliştirmek.<br>
 Regresyoun tarihçesine bakacak olursak regresyonun kökeni 19. yüzyılın başlarına kadar uzanır.
 Fransız matematikçi Adrien-Marie Legendre 1805 yılında, "En Küçük Kareler Yöntemi"ni (Least Squares) yayınladı. 
 Bu, regresyonun hesaplanma şeklinin temelidir. Regresyon en önemli isimlerinden biri hatta isim babası olan kişi de 
@@ -156,9 +156,10 @@ T-test formülünün farklı varyasyonları vardır. Hangisinin kullanılacağı
 
 
 # R2: Regresyon Modelinin Performansı
-Bağımsız değişken x’in, regresyon modeli ile bağımlı değişken y’i ne kadar açıkladığı yüzdesinin ölçütü olan belirtme katsayısı bir diğer adıyla determinasyon katsayısıdır ve R2 ile gösterilir. Belirtme katsayısı, bağımlı değişkendeki değişimin yüzde kaçının bağımsız değişkenler tarafından açıklanabildiğini gösterir.
-R2, “0” ile “1” arasında değerler alır(0<R2<1). Değişkenler arasında doğrusal bir ilişki olduğunda, R2 değerinin 1’e yaklaşması; bağımlı değişkendeki değişimin büyük bir kısmının bağımsız değişkenler tarafından açıklandığını gösterir. Bağımlı ve bağımsız değişken arasındaki ilişkinin derecesi ve yönünü gösteren korelasyon katsayısının(r) karesi belirtme katsayısına (R2) eşittir. Belirtme katsayısı:
-R2=Açıklanabilen Değişim/Toplam Değişim=RKT/YOAKT eşitliğiyle hesaplanır.
+Bağımsız değişken x’in, regresyon modeli ile bağımlı değişken y’i ne kadar açıkladığı yüzdesinin ölçütü olan belirtme katsayısı bir diğer adıyla determinasyon katsayısıdır ve $$R^2$$ ile gösterilir. Belirtme katsayısı, bağımlı değişkendeki değişimin yüzde kaçının bağımsız değişkenler tarafından açıklanabildiğini gösterir.
+$$R^2$$, “0” ile “1” arasında değerler alır(0< $$R^2$$ <1). Değişkenler arasında doğrusal bir ilişki olduğunda, $$R^2$$ değerinin 1’e yaklaşması; bağımlı değişkendeki değişimin büyük bir kısmının bağımsız değişkenler tarafından açıklandığını gösterir. Bağımlı ve bağımsız değişken arasındaki ilişkinin derecesi ve yönünü gösteren korelasyon katsayısının(r) karesi belirtme katsayısına ($$R^2$$) eşittir. Belirtme katsayısı:<br>
+$$R^2$$ =Açıklanabilen Değişim/Toplam Değişim=RKT/YOAKT<br> 
+eşitliğiyle hesaplanır.<Br>
 Eşitlikte verilen RKT; regresyon kareler toplamı ve YOAKT; Y ortalama ayrılış kareler toplamıdır.
 
 Kurulan regresyon modelinin performansı, R2 ile ölçülür. R2, 1’e ne kadar yakınsa, regresyon o kadar anlamlıdır ve belirleyicidir. Bu konuda bilimsel bir karar verebilmek için hipotez testi yapılır.
