@@ -105,12 +105,14 @@ T-testi, gruplar arasında gerçek bir fark olup olmadığını sorgular. Analiz
 ---
 
 T-Testini Kullanmak
-T-testi hesaplamak için üç temel veri değerine ihtiyaç vardır:
+T-testi hesaplamak için üç temel veri değerine ihtiyaç vardır:<br>
+1)Her veri kümesindeki ortalama değerler arasındaki fark, ortalama fark olarak da bilinir.<br>
+2)Her grubun standart sapması<br>
+3)Her grubun veri değerlerinin sayısı<br>
+T-testi iki değer üretir: t-değeri ve serbestlik derecesi.<br>
+* T-değeri veya t-skoru, iki örneklem kümesinin ortalamaları arasındaki farkın, örneklem kümeleri içindeki varyasyona oranıdır.
+* Serbestlik dereceleri, bir çalışmada değişme özgürlüğüne sahip değerleri ifade eder. Bunlar, sıfır hipotezinin önemini ve geçerliliğini değerlendirmek için gereklidir.
 
-Her veri kümesindeki ortalama değerler arasındaki fark, ortalama fark olarak da bilinir.
-Her grubun standart sapması
-Her grubun veri değerlerinin sayısı
-T-testi iki değer üretir: t-değeri ve serbestlik derecesi . T-değeri veya t-skoru, iki örneklem kümesinin ortalamaları arasındaki farkın, örneklem kümeleri içindeki varyasyona oranıdır.
 
 # R2: Regresyon Modelinin Performansı
 Bağımsız değişken x’in, regresyon modeli ile bağımlı değişken y’i ne kadar açıkladığı yüzdesinin ölçütü olan belirtme katsayısı bir diğer adıyla determinasyon katsayısıdır ve R2 ile gösterilir. Belirtme katsayısı, bağımlı değişkendeki değişimin yüzde kaçının bağımsız değişkenler tarafından açıklanabildiğini gösterir.
