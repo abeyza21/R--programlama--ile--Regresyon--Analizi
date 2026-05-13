@@ -68,7 +68,7 @@ Burada;<br>
 * β1:Doğrunun eğimi veya regresyon katsayısıdır.<br>
 * ϵ: Rastgele(Tesadüfi-Şans) hata değeridir.<br>
 
-Biz kurduğumuz regresyonun doğruluğunu ve güvenilirliğini anlamak için  bazı tesler yapıyoruz bu testler  varyasyonların homojenliği testi, otokolerasyon testi, normallik testi, T-testi, Ki-Kare testi, F-testi, $$R^2$$ testi bunlar sadece teslerin birkaçı. Regresyona uygulanabilecek daha pek çok test var. 
+Biz kurduğumuz regresyonun doğruluğunu ve güvenilirliğini anlamak için  bazı tesler yapıyoruz bu testler  varyasyonların homojenliği testi, otokolerasyon testi, normallik testi, T-testi, Student-T testi, Ki-Kare testi, F-testi, $$R^2$$ testi bunlar sadece teslerin birkaçı. Regresyona uygulanabilecek daha pek çok test var. 
 # Regresyondaki Testerin Kullanımları ve Özellikleri 
 ## 1) T-Testi 
 T-testi, iki farklı grubun ortalama değerleri arasında istatistiksel olarak anlamlı bir fark olup olmadığını belirlemek için kullanılan temel bir çıkarımsal istatistik yöntemidir.<br>
@@ -113,7 +113,7 @@ T-testi iki değer üretir: t-değeri ve serbestlik derecesi.<br>
 * T-değeri veya t-skoru, iki örneklem kümesinin ortalamaları arasındaki farkın, örneklem kümeleri içindeki varyasyona oranıdır.
 * Serbestlik dereceleri, bir çalışmada değişme özgürlüğüne sahip değerleri ifade eder. Bunlar, sıfır hipotezinin önemini ve geçerliliğini değerlendirmek için gereklidir.
 
-## T testi çeşitleri 
+### T testi çeşitleri 
 T- tstini  çeşitli yöntemlere uygulayabilmek için bir kaç durum için kullanılan formüller vardır bunlar şu şekildedir;
 #### 1)Eşleştirilmiş Örnek T-Testi Formülü:
 
@@ -154,7 +154,18 @@ T-testi, iki popülasyon örneğinin ortalamaları arasında istatistiksel olara
 T-testi hesaplaması üç veri kullanır: her veri kümesindeki ortalama değerler arasındaki fark, her grubun standart sapması ve veri değerlerinin sayısı.<br>
 T-test formülünün farklı varyasyonları vardır. Hangisinin kullanılacağı farklı faktörlere bağlıdır. Ancak her varyasyon aynı istatistiksel soruyu incelemek için kullanılır.<br>
 
+## 2) F-Testi 
+F testi, oldukça esnek bir istatistiksel test türüdür. Çok çeşitli ortamlarda kullanılabilir. F testleri, birden fazla model terimini aynı anda değerlendirebilir; bu da farklı doğrusal modellerin uyumlarını karşılaştırmalarına olanak tanır. Buna karşılık, t testleri aynı anda yalnızca bir terimi değerlendirebilir.<br>
+Genel anlamlılık F-testini hesaplamak için, istatistiksel yazılımınızın karşılaştırdığı iki modelde uygun terimleri içermesi yeterlidir. Genel F-testi, belirttiğiniz modeli bağımsız değişken içermeyen modelle karşılaştırır. Bu tür model aynı zamanda sadece kesişim terimi içeren model olarak da bilinir.<br<
 
+Genel anlamlılık F testi, doğrusal regresyon modelinizin, bağımsız değişken içermeyen bir modele göre verilere daha iyi uyup uymadığını gösterir. Bu yazıda, genel anlamlılık F testinin R-kare gibi diğer regresyon istatistikleriyle nasıl ilişkili olduğunu inceleyeceğim. R-kare, modelinizin verilere ne kadar iyi uyduğunu gösterir ve F testi bununla ilişkilidir.
+F testi, oldukça esnek bir istatistiksel test türüdür. Çok çeşitli ortamlarda kullanılabilir. F testleri, birden fazla model terimini aynı anda değerlendirebilir; bu da farklı doğrusal modellerin uyumlarını karşılaştırmalarına olanak tanır. Buna karşılık, t testleri aynı anda yalnızca bir terimi değerlendirebilir.
+ANOVA'da F testlerinin nasıl çalıştığına dair blog yazımı okuyun .
+Genel anlamlılık F-testini hesaplamak için, istatistiksel yazılımınızın karşılaştırdığı iki modelde uygun terimleri içermesi yeterlidir. Genel F-testi, belirttiğiniz modeli bağımsız değişken içermeyen modelle karşılaştırır. Bu tür model aynı zamanda sadece kesişim terimi içeren model olarak da bilinir.
+Genel anlamlılık için F testi aşağıdaki iki hipotezi içermektedir:
+Sıfır hipotezi, bağımsız değişken içermeyen modelin, sizin modeliniz kadar verilere uygun olduğunu belirtir.
+Alternatif hipotez, modelinizin yalnızca kesişim noktasını içeren modele göre verilere daha iyi uyduğunu söyler.
+İstatistiksel çıktıda, genel F-testini ANOVA tablosunda bulabilirsiniz.
 
 # R2: Regresyon Modelinin Performansı
 Bağımsız değişken x’in, regresyon modeli ile bağımlı değişken y’i ne kadar açıkladığı yüzdesinin ölçütü olan belirtme katsayısı bir diğer adıyla determinasyon katsayısıdır ve $$R^2$$ ile gösterilir. Belirtme katsayısı, bağımlı değişkendeki değişimin yüzde kaçının bağımsız değişkenler tarafından açıklanabildiğini gösterir.
@@ -191,7 +202,6 @@ r ≈ 0 olduğunda ise değişkenler arasında zayıf veya anlamlı bir doğrusa
 Korelasyon katsayısının mutlak değeri 1’e yaklaştıkça ilişkinin gücü artar. Örneğin, r = 1 tam pozitif ilişkiyi, r = -1 ise tam negatif ilişkiyi ifade eder. Bu yöntem veri analizi, makine öğrenmesi ve istatistiksel modelleme çalışmalarında değişkenler arasındaki ilişkiyi incelemek için yaygın olarak kullanılmaktadır.
 
 #### Korelasyon Katsayısı ve R² Farkı
-
 Korelasyon katsayısı, iki değişken arasındaki doğrusal ilişkinin yönünü ve gücünü gösterir. Regresyon katsayısı ise bağımsız değişkendeki değişimin bağımlı değişken üzerindeki etkisini ifade eder.
 Regresyon modelinin anlamlı olması için eğim katsayısı olan β₁’in sıfırdan farklı olması gerekir. β₁ ≠ 0 ise değişkenler arasında anlamlı bir ilişki vardır.
 R² (R Kare) değeri, regresyon modelinin veriyi açıklama oranını gösterir. R² değeri 1’e yaklaştıkça modelin başarısı artar.
