@@ -69,6 +69,13 @@ Burada;<br>
 ϵ: Rastgele(Tesadüfi-Şans) hata değeridir.<br>
 Biz kurduğumuz regresyonun doğruluğunu ve güvenilirliğini anlamak için  bazı tesler yapıyoruz bu testler  varyasyonların homojenliği testi,otokolerasyon testi, normallik testi 
 
+T-Testini Kullanmak
+T-testi hesaplamak için üç temel veri değerine ihtiyaç vardır:
+
+Her veri kümesindeki ortalama değerler arasındaki fark, ortalama fark olarak da bilinir.
+Her grubun standart sapması
+Her grubun veri değerlerinin sayısı
+T-testi iki değer üretir: t-değeri ve serbestlik derecesi . T-değeri veya t-skoru, iki örneklem kümesinin ortalamaları arasındaki farkın, örneklem kümeleri içindeki varyasyona oranıdır.
 
 # R2: Regresyon Modelinin Performansı
 Bağımsız değişken x’in, regresyon modeli ile bağımlı değişken y’i ne kadar açıkladığı yüzdesinin ölçütü olan belirtme katsayısı bir diğer adıyla determinasyon katsayısıdır ve R2 ile gösterilir. Belirtme katsayısı, bağımlı değişkendeki değişimin yüzde kaçının bağımsız değişkenler tarafından açıklanabildiğini gösterir.
@@ -81,9 +88,17 @@ Kurulan regresyon modelinin performansı, R2 ile ölçülür. R2, 1’e ne kadar
 # Düzeltilmiş R Kare
 R-kare, lineer regresyon modeli için bağımsız değişkenlerimiz (X) tarafından açıklanan bağımlı değişkenimizdeki (Y) varyasyon oranını ölçer. Düzeltilmiş R-kare sadece gerçekte bağımlı değişkeni etkileyen bağımsız değişkenler tarafından açıklanan varyasyon oranını ölçer.
 
-Düzeltilmiş R kare= $$ 1-(1 – R2 )*n-1/n-p-1$$ <br>
-n: Örneklemdeki veri sayısı<br>
-p: bağımsız değişken sayısı<br>
+
+### Düzeltilmiş R-Kare (Adjusted R-squared)
+
+$$
+\text{Düzeltilmiş R-kare} = 1 - \left( \frac{(1 - R^2) \times (n - 1)}{n - p - 1} \right)
+$$
+
+**Burada:**
+* **$n$:** Örneklemdeki veri sayısı
+* **$p$:** Bağımsız değişken sayısı
+* **$R^2$:** Belirleyicilik katsayısı (R-kare)
 
 # Korelasyon Katsayısı(r)
 
