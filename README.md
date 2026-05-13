@@ -132,6 +132,7 @@ anlamına gelmektedir.
 $$
 \text{T değeri} = \frac{\text{ortalama}_1 - \text{ortalama}_2}{\sqrt{\frac{(n_1 - 1) \times \text{var}_1^2 + (n_2 - 1) \times \text{var}_2^2}{n_1 + n_2 - 2} \times \left( \frac{1}{n_1} + \frac{1}{n_2} \right)}}
 $$
+
 Burada:<br>
 * $\text{ortalama}_1, \text{ortalama}_2$ = Örneklem kümelerinin her birinin ortalama değerleri
 * $\text{var}_1, \text{var}_2$ = Örneklem kümelerinin her birinin varyansı
