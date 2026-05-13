@@ -173,14 +173,21 @@ R-kare, lineer regresyon modeli için bağımsız değişkenlerimiz (X) tarafın
 $$
 \text{Düzeltilmiş R-kare} = 1 - \left( \frac{(1 - R^2) \times (n - 1)}{n - p - 1} \right)
 $$
+
 Burada:<br>
 * **$n$:** Örneklemdeki veri sayısı
 * **$p$:** Bağımsız değişken sayısı
 * **$R^2$:** Belirleyicilik katsayısı (R-kare)
 anlmaına gelmekteder. 
 
-# Korelasyon Katsayısı(r)
+### Korelasyon Katsayısı(r)
+Korelasyon katsayısı (r), iki değişken arasındaki doğrusal ilişkinin yönünü ve gücünü ölçen istatistiksel bir değerdir. Bu değer değişkenlerin birimlerinden bağımsızdır ve her zaman -1 ile 1 arasında yer alır.
 
+r > 0 ise değişkenler arasında pozitif yönlü ilişki vardır. Yani bir değişken artarken diğeri de artma eğilimindedir.
+r < 0 ise negatif yönlü ilişki vardır. Bir değişken artarken diğeri azalma eğilimindedir.
+r ≈ 0 olduğunda ise değişkenler arasında zayıf veya anlamlı bir doğrusal ilişki bulunmaz.
+
+Korelasyon katsayısının mutlak değeri 1’e yaklaştıkça ilişkinin gücü artar. Örneğin, r = 1 tam pozitif ilişkiyi, r = -1 ise tam negatif ilişkiyi ifade eder. Bu yöntem veri analizi, makine öğrenmesi ve istatistiksel modelleme çalışmalarında değişkenler arasındaki ilişkiyi incelemek için yaygın olarak kullanılmaktadır.
 
 
 
