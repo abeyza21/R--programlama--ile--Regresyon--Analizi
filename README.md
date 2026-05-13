@@ -113,6 +113,23 @@ T-testi iki değer üretir: t-değeri ve serbestlik derecesi.<br>
 * T-değeri veya t-skoru, iki örneklem kümesinin ortalamaları arasındaki farkın, örneklem kümeleri içindeki varyasyona oranıdır.
 * Serbestlik dereceleri, bir çalışmada değişme özgürlüğüne sahip değerleri ifade eder. Bunlar, sıfır hipotezinin önemini ve geçerliliğini değerlendirmek için gereklidir.
 
+## T testi çeşitleri 
+T- tstini  çeşitli yöntemlere uygulayabilmek için bir kaç durum için kullanılan formüller vardır bunlar şu şekildedir;
+#### 1)Eşleştirilmiş Örnek T-Testi Formülü:
+
+$$
+T = \frac{\text{ortalama}_1 - \text{ortalama}_2}{\frac{s_{\text{fark}}}{\sqrt{N}}}
+$$
+
+Burada:<br>
+* $\text{ortalama}_1, \text{ortalama}_2$ = Örnek kümelerinin her birinin ortalama değerleri
+* $s_{\text{fark}}$ = Eşleştirilmiş veri değerlerinin farklarının standart sapması
+* $N$ = Örneklem boyutu (eşleştirilmiş farkların sayısı)
+* $N-1$ = Serbestlik dereceleri
+* anlamına gelmektedir. 
+
+
+
 
 # R2: Regresyon Modelinin Performansı
 Bağımsız değişken x’in, regresyon modeli ile bağımlı değişken y’i ne kadar açıkladığı yüzdesinin ölçütü olan belirtme katsayısı bir diğer adıyla determinasyon katsayısıdır ve R2 ile gösterilir. Belirtme katsayısı, bağımlı değişkendeki değişimin yüzde kaçının bağımsız değişkenler tarafından açıklanabildiğini gösterir.
