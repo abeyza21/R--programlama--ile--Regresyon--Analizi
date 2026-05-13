@@ -42,19 +42,19 @@ bu fenomene bu ismi vermiştir.<br>
 
 İstatistik dünyasında çok sayıda regresyon türü olsa da, en çok kullanılan çeşitleri;<br>
 
-A. Basit Doğrusal Regresyon (Simple Linear Regression) :Tek bir bağımsız değişken ile
+#### A. Basit Doğrusal Regresyon (Simple Linear Regression) :Tek bir bağımsız değişken ile
 bağımlı değişken arasındaki ilişkiyi düz bir çizgi üzerinde inceler. Formülü şu şekildedir:<br>
               $$Y = \beta_0 + \beta_1 X + \epsilon$$
 
 
-B. Çoklu Doğrusal Regresyon (Multiple Linear Regression) :Bağımlı değişkeni etkileyen birden
+#### B. Çoklu Doğrusal Regresyon (Multiple Linear Regression) :Bağımlı değişkeni etkileyen birden
 fazla bağımsız değişken olduğunda kullanılır. Örneğin; bir evin fiyatını (y) tahmin ederken sadece
 metrekaresine ($x_{1}$) değil, oda sayısına ($x_{2}$) ve konumuna ($x_{3}$) da bakılması durumudur.
 
-C. Lojistik Regresyon (Logistic Regression) :Sonucun sayısal değil, kategorik (Evet/Hayır, Geçti/Kaldı, 0/1) 
+#### C. Lojistik Regresyon (Logistic Regression) :Sonucun sayısal değil, kategorik (Evet/Hayır, Geçti/Kaldı, 0/1) 
 olduğu durumlarda kullanılır. Örneğin, bir e-postanın spam olup olmadığını tahmin etmek için kullanılır.
 
-D. Polinom Regresyon (Polynomial Regression) :Değişkenler arasındaki ilişki düz bir çizgi değil 
+#### D. Polinom Regresyon (Polynomial Regression) :Değişkenler arasındaki ilişki düz bir çizgi değil 
 de bir eğri ise tercih edilir.E. Ridge ve Lasso RegresyonVeri setinde çok fazla değişken olduğunda ve bu 
 değişkenler arasında yüksek korelasyon bulunduğunda, modelin aşırı öğrenmesini (overfitting) engellemek için 
 kullanılan düzenleme (regularization) teknikleridir.
@@ -62,21 +62,20 @@ kullanılan düzenleme (regularization) teknikleridir.
 Basit doğrusal regresyon; bağımsız değişken (X)ile bağımlı değişken (Y)deki değişimi açıklamayı, bağımsız değişkendeki bir birimlik değişimin bağımlı değişken üzerindeki etkisini ölçmeyi amaçlar.
 Temel amaç, bağımlı ve bağımsız değişken arasındaki ilişkiyi ifade eden doğrusal fonksiyonu bulmaktır.
 Stokastik (Olasılıklı) bir model olan ve ana kütledeki ilişkiyi gösteren basit doğrusal regresyon denklemi aşağıdaki gibi ifade edilir.<br>
-y=β0+β1X+ϵ
+y=β0+β1X+ϵ <br>
 Burada;<br>
-β0:Doğrunun y-eksenini kestiği yer ve regresyon sabitidir.<br>
-β1:Doğrunun eğimi veya regresyon katsayısıdır.<br>
-ϵ: Rastgele(Tesadüfi-Şans) hata değeridir.<br>
+* β0:Doğrunun y-eksenini kestiği yer ve regresyon sabitidir.<br>
+* β1:Doğrunun eğimi veya regresyon katsayısıdır.<br>
+* ϵ: Rastgele(Tesadüfi-Şans) hata değeridir.<br>
 Biz kurduğumuz regresyonun doğruluğunu ve güvenilirliğini anlamak için  bazı tesler yapıyoruz bu testler  varyasyonların homojenliği testi, otokolerasyon testi, normallik testi, T-testi, Ki-Kare testi, F-testi, $$R^2$$ testi bunlar sadece teslerin birkaçı. Regresyona uygulanabilecek daha pek çok test var. 
 # Regresyondaki Testerin Kullanımları ve Özellikleri 
-## ->T-Testi 
-
+## 1) T-Testi 
 T-testi, iki farklı grubun ortalama değerleri arasında istatistiksel olarak anlamlı bir fark olup olmadığını belirlemek için kullanılan temel bir çıkarımsal istatistik yöntemidir.<br>
 Gerçek dünyadaki veriler nadiren birbirinin aynısıdır. T-testi, gözlemlenen farkın sadece **şans eseri mi** oluştuğunu yoksa **belirgin bir nedene mi** dayandığını anlamamızı sağlar.
 * **Eğitim:** Bir fizik dersindeki öğrencilerin notları ile bir yazı dersindeki farklı bir öğrenci grubunun notlarının karşılaştırılması.
 * **Tıp:** Bir ilaç testinde, plasebo verilen (kontrol grubu) ile ilaç verilen (deney grubu) hastaların iyileşme oranlarının analizi.
 
-## T-Testi Varsayımları
+#### T-Testi Varsayımları
 Sağlıklı bir t-testi sonucu alabilmek için verilerin şu dört ana varsayımı karşılaması gerekir:
 
 1.  **Ölçek Türü:** Toplanan veriler sürekli (continuous) veya sıralı (ordinal) bir ölçeğe uygun olmalıdır (Örn: IQ skorları, sınav notları).
@@ -84,7 +83,7 @@ Sağlıklı bir t-testi sonucu alabilmek için verilerin şu dört ana varsayım
 3.  **Normal Dağılım:** Veriler grafik üzerine döküldüğünde çan eğrisi şeklinde bir normal dağılım sergilemelidir.
 4.  **Varyans Homojenliği:** Grupların standart sapmalarının eşit veya birbirine çok yakın (homojen) olması gerekir.
 
-##  T- Testinde hipotezlerin kullanılması 
+####  T- Testinde hipotezlerin kullanılması 
  * **$H_0$ (Sıfır Hipotezi / Yokluk Hipotezi)**: İncelenen durumlar arasında bir fark veya ilişki olmadığını savunan, "statüko"yu temsil eden hipotezdir.<br>
 * **$H_1$ (Alternatif Hipotez)**: Araştırmacının asıl ispatlamaya çalıştığı, değişkenler arasında anlamlı bir fark veya ilişki olduğunu öne süren hipotezdir.
 T-testi, her iki veri kümesinden birer örneklem alır ve süreci **Sıfır Hipotezi ($H_0$)** üzerine kurar.
@@ -93,7 +92,7 @@ T-testi, her iki veri kümesinden birer örneklem alır ve süreci **Sıfır Hip
 Formüller kullanılarak hesaplanan değerler, standart tablo değerleri ile karşılaştırılır. Bu karşılaştırma, farkın "şans aralığının" dışında olup olmadığını belirler.
 **
 
-## Sonuçların Yorumlanması
+#### Sonuçların Yorumlanması
 
 T-testi, gruplar arasında gerçek bir fark olup olmadığını sorgular. Analiz sonucunda p-değeri ve t-skoru baz alınarak şu kararlara varılır:
 
