@@ -167,7 +167,7 @@ Sıfır hipotezi, bağımsız değişken içermeyen modelin, sizin modeliniz kad
 Alternatif hipotez, modelinizin yalnızca kesişim noktasını içeren modele göre verilere daha iyi uyduğunu söyler.
 İstatistiksel çıktıda, genel F-testini ANOVA tablosunda bulabilirsiniz.
 
-# R^2: Regresyon Modelinin Performansı
+# ##R^2##: Regresyon Modelinin Performansı
 Bağımsız değişken x’in, regresyon modeli ile bağımlı değişken y’i ne kadar açıkladığı yüzdesinin ölçütü olan belirtme katsayısı bir diğer adıyla determinasyon katsayısıdır ve $$R^2$$ ile gösterilir. Belirtme katsayısı, bağımlı değişkendeki değişimin yüzde kaçının bağımsız değişkenler tarafından açıklanabildiğini gösterir.
 $$R^2$$, “0” ile “1” arasında değerler alır(0< $$R^2$$ <1). Değişkenler arasında doğrusal bir ilişki olduğunda, $$R^2$$ değerinin 1’e yaklaşması; bağımlı değişkendeki değişimin büyük bir kısmının bağımsız değişkenler tarafından açıklandığını gösterir. Bağımlı ve bağımsız değişken arasındaki ilişkinin derecesi ve yönünü gösteren korelasyon katsayısının(r) karesi belirtme katsayısına ($$R^2$$) eşittir. Belirtme katsayısı:<br>
 $$R^2$$ =Açıklanabilen Değişim/Toplam Değişim=RKT/YOAKT<br> 
