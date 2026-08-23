@@ -206,3 +206,4 @@ Korelasyon katsayısı, iki değişken arasındaki doğrusal ilişkinin yönün�
 Regresyon modelinin anlamlı olması için eğim katsayısı olan β₁’in sıfırdan farklı olması gerekir. β₁ ≠ 0 ise değişkenler arasında anlamlı bir ilişki vardır.
 R² (R Kare) değeri, regresyon modelinin veriyi açıklama oranını gösterir. R² değeri 1’e yaklaştıkça modelin başarısı artar.
 
+# Regresyon Varsayımları ve Teşhis Testleri
