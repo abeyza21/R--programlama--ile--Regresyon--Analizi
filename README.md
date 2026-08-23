@@ -207,3 +207,10 @@ Regresyon modelinin anlamlı olması için eğim katsayısı olan β₁’in sı
 R² (R Kare) değeri, regresyon modelinin veriyi açıklama oranını gösterir. R² değeri 1’e yaklaştıkça modelin başarısı artar.
 
 # Regresyon Varsayımları ve Teşhis Testleri
+
+
+
+
+
+
+
