@@ -208,7 +208,7 @@ R² (R Kare) değeri, regresyon modelinin veriyi açıklama oranını gösterir.
 
 # Regresyon Varsayımları ve Teşhis Testleri
 Bir regresyon modeli kurup $R^2$ değerini hesaplamak analiz sürecinin sadece ilk adımıdır. Elde edilen katsayıların ve tahminlerin istatistiksel olarak güvenilir (BLUE - Best Linear Unbiased Estimator) kabul edilebilmesi için modelin belirli varsayımları karşılaması gerekir. Bu varsayımların ihlal edilip edilmediği teşhis testleri (diagnostic tests) ile kontrol edilir.
-## A. Normallik Varsayımı (Normality of Residuals)
+## Normallik Varsayımı (Normality of Residuals)
 Regresyon modelinden elde edilen hata terimlerinin (artıkların) ortalaması 0 olan normal bir dağılım göstermesi gerekir. Normallik ihlal edildiğinde hipotez testleri (T ve F testleri) güvenilirliğini kaybeder.
 * Shapiro-Wilk Testi: Örneklem boyutu küçük ve orta büyüklükteki verilerde artıkların normalliğini test etmek için kullanılır.
 * Q-Q Plot (Quantile-Quantile): Görsel olarak artıkların teorik normal dağılım çizgisine ne kadar uyduğunu gösterir.
@@ -217,11 +217,39 @@ Yorumlama: Shapiro-Wilk testinde $$p > 0.05$$ ise hataların normal dağıldığ
 Bağımsız değişkenin alacağı tüm değerler için hata terimlerinin varyansı sabit olmalıdır. Varyansın sabit olmaması durumuna Değişen Varyans (Heteroscedasticity) denir. Değişen varyans varlığında standart hatalar yanlış hesaplanır ve katsayılar güvenilmez hale gelir.
 * Breusch-Pagan Testi: Hata varyansının bağımsız değişkenlerle sistematik bir ilişkisi olup olmadığını ölçer.
 Yorumlama: Breusch-Pagan testinde $$p > 0.05$$ olması varyansın sabit olduğunu ($$H_0$$), yani modelin sağlıklı olduğunu gösterir.
+## Otokorelasyon Olmaması (No Autocorrelation)
+Hata terimlerinin birbirisinden bağımsız olması gerekir. Özellikle zaman serileri verilerinde, bir döneme ait hatanın bir sonraki dönemi etkilemesi durumuna otokorelasyon denir.
+* Durbin-Watson Testi: Artıklar arasında birinci dereceden otokorelasyon olup olmadığını test eder.
+Yorumlama: Durbin-Watson ($$DW$$) biyo-istatistik ve ekonometride kritik bir parametredir. $$DW$$ istatistiğinin 2'ye yakın bir değer alması otokorelasyon olmadığını gösterir. $$DW < 1.5$$ ise pozitif, $$DW > 2.5$$ ise negatif otokorelasyon riski mevcuttur.
+## Çoklu Doğrusallık Olmaması (No Multicollinearity)
+Çoklu regresyon modellerinde, bağımsız değişkenlerin birbiriyle yüksek düzeyde ilişkili (korelasyonlu) olmaması gerekir. Bağımsız değişkenler birbiriyle aşırı ilişkili olduğunda, model her bir değişkenin bağımlı değişken üzerindeki tekil etkisini ayırt edemez.
+* VIF (Variance Inflation Factor - Varyans Şişirme Faktörü): Her bağımsız değişkenin modeldeki varyansı ne kadar artırdığını ölçer.
+Yorumlama: Hesaplanan $$VIF$$ değerinin 5'in üzerinde olması orta düzeyde, 10'un üzerinde olması ise ciddi boyutta çoklu doğrusallık problemi olduğunu gösterir. VIF değeri yüksek çıkan değişkenler modelden çıkarılabilir veya dönüştürülebilir.
 
-
-
-
-
+# Regresyon Analizinde Kestirim Yöntemleri ve Model Doğrulama
+Bir regresyon modeli kurmanın temel amacı, eldeki verileri açıklamakla kalmayıp geleceğe veya görmediğimiz verilere dair doğru kestirimlerde (prediction) bulunmaktır. Ancak her veri yapısı aynı değildir; doğrusal olmayan ilişkiler, yüksek boyutlu veriler veya çoklu doğrusallık riski farklı kestirim yaklaşımlarını gerektirir.Bu yazıda, regresyon analizinde kullanılan temel kestirim yöntemlerini ve bu kestirimlerin başarısını ölçmek için uygulanan doğrulama tekniklerini inceliyoruz.
+## Regresyon Kestirim Yöntemleri
+Bağımlı değişkeni ($$Y$$) kestirirken verinin Karmaşıklığına ve boyutuna göre iki ana yaklaşım kullanılır:
+### Parametrik Kestirim Yöntemleri
+* En Küçük Kareler Yöntemi (Ordinary Least Squares - OLS):Klasik doğrusal regresyonun temelidir. Gerçek değerler ile kestirilen değerler arasındaki hata kareler toplamını ($SSE$) en aza indirmeyi amaçlar. Varsayımlar sağlandığında en verimli ve tarafsız ($BLUE$) kestirimleri sunar.
+* Düzenlileştirilmiş (Regularized) Kestirim Yöntemleri:Çok fazla bağımsız değişken olduğunda veya değişkenler arasında yüksek korelasyon (çoklu doğrusallık) bulunduğunda OLS yöntemi veriyi ezberlemeye (overfitting) başlar. Bu durumda modele ceza terimi ekleyen yöntemler kullanılır:
+** Ridge Regresyon ($L_2$ Penaltı): Katsayıları sıfıra yaklaştırır ancak tamamen sıfırlamaz. Çoklu doğrusallık varlığında kestirim varyansını düşürür.
+** Lasso Regresyon ($L_1$ Penaltı): Önemsiz değişkenlerin katsayılarını tam olarak $$0$$ yapar. Kestirim yaparken aynı zamanda otomatik değişken seçimi (feature selection) sağlar.
+** ElasticNet: Ridge ve Lasso'nun birleşimidir; hem ceza uygular hem de gruplanmış değişkenlerle başa çıkar.
+### Esnek ve Eğrisel Kestirim Yöntemleri
+* Polinom Regresyon (Polynomial Regression):Değişkenler arasındaki ilişki düz bir çizgi yerine eğrisel bir trend izlediğinde ($X^2, X^3$ gibi) yüksek dereceli terimler eklenerek kestirim gücü artırılır.
+* Generalized Additive Models (GAM) / Splines:Veriyi parçalara bölerek her aralıkta esnek eğriler oturtan, katı doğrusallık kalıplarına uymayan karmaşık veri yapılarında yüksek kestirim başarısı gösteren parametrik olmayan yöntemlerdir.
+### Kestirim Performansının Test Edilmesi (Model Validation)
+Modelin başarısı, eğitildiği veri üzerindeki performansı ile değil, daha önce hiç görmediği veri (out-of-sample) üzerindeki kestirim doğruluğu ile ölçülür.
+Veri Bölümleme (Train / Test Split)Kestirim gücünü tarafsız sınamak için veri seti ikiye ayrılır:
+* Eğitim Seti (%70 - %80): Modelin katsayılarını ve parametrelerini öğrenmek için kullanılır.
+* Test Seti (%20 - %30): Modelin kestirim yeteneğini ölçmek üzere kilitli tutulur.
+# Kestirim Hata Metrikleri
+Kestirim modelinin başarısını ölçmek için kullanılan temel istatistiksel metrikler:
+$$\text{MAE} = \frac{1}{n} \sum \vert{}y_i - \hat{y}_i\vert{}$$$$\text{RMSE} = \sqrt{\frac{1}{n} \sum (y_i - \hat{y}_i)^2}$$$$\text{MAPE} = \frac{100\%}{n} \sum \left\vert{} \frac{y_i - \hat{y}_i}{y_i} \right\vert{}$$ 
+* MAE (Mean Absolute Error): Tahmin hatalarının mutlak ortalamasıdır. Yorumlaması kolaydır (gerçek birimle aynıdır).
+* RMSE (Root Mean Squared Error): Hataların karesini aldığı için büyük kestirim hatalarını daha ağır cezalandırır.
+* MAPE (Mean Absolute Percentage Error): Hatanın yüzde kaç olduğunu gösterir, ölçekten bağımsız karşılaştırma yapmaya yarar.
 
 
 
