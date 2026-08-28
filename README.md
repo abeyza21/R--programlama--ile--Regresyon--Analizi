@@ -233,9 +233,9 @@ Bağımlı değişkeni ($$Y$$) kestirirken verinin Karmaşıklığına ve boyutu
 ### Parametrik Kestirim Yöntemleri
 * En Küçük Kareler Yöntemi (Ordinary Least Squares - OLS):Klasik doğrusal regresyonun temelidir. Gerçek değerler ile kestirilen değerler arasındaki hata kareler toplamını ($SSE$) en aza indirmeyi amaçlar. Varsayımlar sağlandığında en verimli ve tarafsız ($BLUE$) kestirimleri sunar.
 * Düzenlileştirilmiş (Regularized) Kestirim Yöntemleri:Çok fazla bağımsız değişken olduğunda veya değişkenler arasında yüksek korelasyon (çoklu doğrusallık) bulunduğunda OLS yöntemi veriyi ezberlemeye (overfitting) başlar. Bu durumda modele ceza terimi ekleyen yöntemler kullanılır:
-** Ridge Regresyon ($L_2$ Penaltı): Katsayıları sıfıra yaklaştırır ancak tamamen sıfırlamaz. Çoklu doğrusallık varlığında kestirim varyansını düşürür.
-** Lasso Regresyon ($L_1$ Penaltı): Önemsiz değişkenlerin katsayılarını tam olarak $$0$$ yapar. Kestirim yaparken aynı zamanda otomatik değişken seçimi (feature selection) sağlar.
-** ElasticNet: Ridge ve Lasso'nun birleşimidir; hem ceza uygular hem de gruplanmış değişkenlerle başa çıkar.
+*Ridge Regresyon ($L_2$ Penaltı): Katsayıları sıfıra yaklaştırır ancak tamamen sıfırlamaz. Çoklu doğrusallık varlığında kestirim varyansını düşürür.
+*Lasso Regresyon ($L_1$ Penaltı): Önemsiz değişkenlerin katsayılarını tam olarak $$0$$ yapar. Kestirim yaparken aynı zamanda otomatik değişken seçimi (feature selection) sağlar.
+* ElasticNet: Ridge ve Lasso'nun birleşimidir; hem ceza uygular hem de gruplanmış değişkenlerle başa çıkar.
 ### Esnek ve Eğrisel Kestirim Yöntemleri
 * Polinom Regresyon (Polynomial Regression):Değişkenler arasındaki ilişki düz bir çizgi yerine eğrisel bir trend izlediğinde ($X^2, X^3$ gibi) yüksek dereceli terimler eklenerek kestirim gücü artırılır.
 * Generalized Additive Models (GAM) / Splines:Veriyi parçalara bölerek her aralıkta esnek eğriler oturtan, katı doğrusallık kalıplarına uymayan karmaşık veri yapılarında yüksek kestirim başarısı gösteren parametrik olmayan yöntemlerdir.
