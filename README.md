@@ -240,15 +240,15 @@ Bağımlı değişkeni ($$Y$$) kestirirken verinin Karmaşıklığına ve boyutu
 * Polinom Regresyon (Polynomial Regression):Değişkenler arasındaki ilişki düz bir çizgi yerine eğrisel bir trend izlediğinde ($X^2, X^3$ gibi) yüksek dereceli terimler eklenerek kestirim gücü artırılır.
 * Generalized Additive Models (GAM) / Splines:Veriyi parçalara bölerek her aralıkta esnek eğriler oturtan, katı doğrusallık kalıplarına uymayan karmaşık veri yapılarında yüksek kestirim başarısı gösteren parametrik olmayan yöntemlerdir.
 ### Kestirim Performansının Test Edilmesi (Model Validation)
-Modelin başarısı, eğitildiği veri üzerindeki performansı ile değil, daha önce hiç görmediği veri (out-of-sample) üzerindeki kestirim doğruluğu ile ölçülür.
+Modelin başarısı, eğitildiği veri üzerindeki performansı ile değil, daha önce hiç görmediği veri (out-of-sample) üzerindeki kestirim doğruluğu ile ölçülür.<br>
 Veri Bölümleme (Train / Test Split)Kestirim gücünü tarafsız sınamak için veri seti ikiye ayrılır:
 * Eğitim Seti (%70 - %80): Modelin katsayılarını ve parametrelerini öğrenmek için kullanılır.
 * Test Seti (%20 - %30): Modelin kestirim yeteneğini ölçmek üzere kilitli tutulur.
 # Kestirim Hata Metrikleri
 Kestirim modelinin başarısını ölçmek için kullanılan temel istatistiksel metrikler:
-$$\text{MAE} = \frac{1}{n} \sum \vert{}y_i - \hat{y}_i\vert{}$$ 
-$$\text{RMSE} = \sqrt{\frac{1}{n} \sum (y_i - \hat{y}_i)^2}$$ 
-$$\text{MAPE} = \frac{100\%}{n} \sum \left\vert{} \frac{y_i - \hat{y}_i}{y_i} \right\vert{}$$ 
+$$\text{MAE} = \frac{1}{n} \sum \vert{}y_i - \hat{y}_i\vert{}$$ <br>
+$$\text{RMSE} = \sqrt{\frac{1}{n} \sum (y_i - \hat{y}_i)^2}$$ <br>
+$$\text{MAPE} = \frac{100\%}{n} \sum \left\vert{} \frac{y_i - \hat{y}_i}{y_i} \right\vert{}$$ <br>
 * MAE (Mean Absolute Error): Tahmin hatalarının mutlak ortalamasıdır. Yorumlaması kolaydır (gerçek birimle aynıdır).
 * RMSE (Root Mean Squared Error): Hataların karesini aldığı için büyük kestirim hatalarını daha ağır cezalandırır.
 * MAPE (Mean Absolute Percentage Error): Hatanın yüzde kaç olduğunu gösterir, ölçekten bağımsız karşılaştırma yapmaya yarar.
