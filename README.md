@@ -246,7 +246,9 @@ Veri Bölümleme (Train / Test Split)Kestirim gücünü tarafsız sınamak için
 * Test Seti (%20 - %30): Modelin kestirim yeteneğini ölçmek üzere kilitli tutulur.
 # Kestirim Hata Metrikleri
 Kestirim modelinin başarısını ölçmek için kullanılan temel istatistiksel metrikler:
-$$\text{MAE} = \frac{1}{n} \sum \vert{}y_i - \hat{y}_i\vert{}$$$$\text{RMSE} = \sqrt{\frac{1}{n} \sum (y_i - \hat{y}_i)^2}$$$$\text{MAPE} = \frac{100\%}{n} \sum \left\vert{} \frac{y_i - \hat{y}_i}{y_i} \right\vert{}$$ 
+$$\text{MAE} = \frac{1}{n} \sum \vert{}y_i - \hat{y}_i\vert{}$$ 
+$$\text{RMSE} = \sqrt{\frac{1}{n} \sum (y_i - \hat{y}_i)^2}$$ 
+$$\text{MAPE} = \frac{100\%}{n} \sum \left\vert{} \frac{y_i - \hat{y}_i}{y_i} \right\vert{}$$ 
 * MAE (Mean Absolute Error): Tahmin hatalarının mutlak ortalamasıdır. Yorumlaması kolaydır (gerçek birimle aynıdır).
 * RMSE (Root Mean Squared Error): Hataların karesini aldığı için büyük kestirim hatalarını daha ağır cezalandırır.
 * MAPE (Mean Absolute Percentage Error): Hatanın yüzde kaç olduğunu gösterir, ölçekten bağımsız karşılaştırma yapmaya yarar.
