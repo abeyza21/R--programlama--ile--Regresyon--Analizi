@@ -207,6 +207,17 @@ Regresyon modelinin anlamlı olması için eğim katsayısı olan β₁’in sı
 R² (R Kare) değeri, regresyon modelinin veriyi açıklama oranını gösterir. R² değeri 1’e yaklaştıkça modelin başarısı artar.
 
 # Regresyon Varsayımları ve Teşhis Testleri
+Bir regresyon modeli kurup $R^2$ değerini hesaplamak analiz sürecinin sadece ilk adımıdır. Elde edilen katsayıların ve tahminlerin istatistiksel olarak güvenilir (BLUE - Best Linear Unbiased Estimator) kabul edilebilmesi için modelin belirli varsayımları karşılaması gerekir. Bu varsayımların ihlal edilip edilmediği teşhis testleri (diagnostic tests) ile kontrol edilir.
+## A. Normallik Varsayımı (Normality of Residuals)
+Regresyon modelinden elde edilen hata terimlerinin (artıkların) ortalaması 0 olan normal bir dağılım göstermesi gerekir. Normallik ihlal edildiğinde hipotez testleri (T ve F testleri) güvenilirliğini kaybeder.
+* Shapiro-Wilk Testi: Örneklem boyutu küçük ve orta büyüklükteki verilerde artıkların normalliğini test etmek için kullanılır.
+* Q-Q Plot (Quantile-Quantile): Görsel olarak artıkların teorik normal dağılım çizgisine ne kadar uyduğunu gösterir.
+Yorumlama: Shapiro-Wilk testinde $$p > 0.05$$ ise hataların normal dağıldığı ($$H_0$$) kabul edilir.
+## Sabit Varyans / Eşvaryanslılık (Homoscedasticity)
+Bağımsız değişkenin alacağı tüm değerler için hata terimlerinin varyansı sabit olmalıdır. Varyansın sabit olmaması durumuna Değişen Varyans (Heteroscedasticity) denir. Değişen varyans varlığında standart hatalar yanlış hesaplanır ve katsayılar güvenilmez hale gelir.
+* Breusch-Pagan Testi: Hata varyansının bağımsız değişkenlerle sistematik bir ilişkisi olup olmadığını ölçer.
+Yorumlama: Breusch-Pagan testinde $$p > 0.05$$ olması varyansın sabit olduğunu ($$H_0$$), yani modelin sağlıklı olduğunu gösterir.
+
 
 
 
